@@ -1,0 +1,16 @@
+////////ADD STORE PROCEDURE//////////
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AddNewContact`(
+    IN SP_add_firstname VARCHAR(100), 
+    IN SP_add_lastname VARCHAR(100), 
+    IN SP_add_birthdate DATE, 
+    IN SP_add_workphone VARCHAR(20), 
+    IN SP_add_homephone VARCHAR(20), 
+    IN SP_add_email VARCHAR(255)
+)
+BEGIN
+    INSERT INTO contacts (firstname, lastname, birthdate, workphone, homephone, email, createdByID, createdDate) 
+    VALUES (SP_add_firstname, SP_add_lastname, SP_add_birthdate, SP_add_workphone, SP_add_homephone, SP_add_email, 1, NOW());
+END
+
+////////ADD STORE PROCEDURE//////////

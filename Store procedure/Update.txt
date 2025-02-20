@@ -1,11 +1,5 @@
-----DELETE CONTACT----
-CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteContact`(IN contact_id INT(11))
-BEGIN
-	DELETE FROM contacts WHERE id = contact_id;
-END
-----DELETE CONTACT----
-
 ---UPDATE CONTACT-----
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `EditContact`(
     IN contact_id INT, 
     IN newfirstname VARCHAR(250), 

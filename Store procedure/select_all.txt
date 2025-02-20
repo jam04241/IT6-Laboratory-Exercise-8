@@ -1,0 +1,9 @@
+/////// SELECT ALL ////////
+
+CREATE PROCEDURE ListAllContacts()
+BEGIN
+    SELECT id, firstname, lastname, birthdate, workphone, homephone, email, createdByID, createdDate 
+    FROM contacts;
+END
+
+/////// SELECT ALL ////////

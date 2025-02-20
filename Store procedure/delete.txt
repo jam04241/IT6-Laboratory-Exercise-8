@@ -1,0 +1,8 @@
+----DELETE CONTACT----
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteContact`(IN contact_id INT(11))
+BEGIN
+	DELETE FROM contacts WHERE id = contact_id;
+END
+
+----DELETE CONTACT----

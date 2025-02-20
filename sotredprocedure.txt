@@ -1,0 +1,29 @@
+----DELETE CONTACT----
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteContact`(IN contact_id INT(11))
+BEGIN
+	DELETE FROM contacts WHERE id = contact_id;
+END
+----DELETE CONTACT----
+
+---UPDATE CONTACT-----
+CREATE DEFINER=`root`@`localhost` PROCEDURE `EditContact`(
+    IN contact_id INT, 
+    IN newfirstname VARCHAR(250), 
+    IN newlastname VARCHAR(250), 
+    IN newbirthdate DATE, 
+    IN newworkphone VARCHAR(20), 
+    IN newhomephone VARCHAR(20), 
+    IN newemail VARCHAR(255)
+)
+BEGIN
+    UPDATE contacts 
+    SET firstname = newfirstname, 
+        lastname = newlastname, 
+        birthdate = newbirthdate, 
+        workphone = newworkphone, 
+        homephone = newhomephone, 
+        email = newemail
+    WHERE id = contact_id;
+END
+
+---UPDATE CONTACT-----

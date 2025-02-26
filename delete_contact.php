@@ -19,8 +19,8 @@ if (isset($_GET["id"])) {
 
     // Prepare and execute stored procedure for deleting contact
     $stmt = $conn->prepare("CALL DeleteContact(?)");
-    $stmt->bind_param("i", $contact_id);
-
+    $stmt->bind_param("i", $contact_id);  
+    echo "<script>alert('Are you sure about this?');</script>";
     if ($stmt->execute()) {
         echo "Contact deleted successfully.";
     } else {
